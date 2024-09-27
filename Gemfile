@@ -72,6 +72,12 @@ group :development do
   gem 'rails-erd'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'capistrano', '3.18.0'
+  gem 'capistrano-rvm', '0.1.2'
+  gem 'capistrano-rails', '1.4.0'
+  gem 'capistrano-passenger'
+  gem 'capistrano-bundler', '1.5.0'
+  gem 'capistrano3-puma'
 end
 
 group :test do
@@ -85,3 +91,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'rails-controller-testing', '~> 1.0'
 gem 'bootstrap', '~> 5.0.0'
+gem 'config'
+gem 'puma_worker_killer'
