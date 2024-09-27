@@ -77,7 +77,7 @@ group :development do
   gem 'capistrano-rails', '1.4.0'
   gem 'capistrano-passenger'
   gem 'capistrano-bundler', '1.5.0'
-  gem 'capistrano3-puma'
+  gem 'capistrano3-puma', '~> 5.2'
 end
 
 group :test do
