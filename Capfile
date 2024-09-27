@@ -19,8 +19,7 @@ require 'capistrano/puma'
 require 'capistrano/rails/migrations'
 require "capistrano/rails/assets"
 install_plugin Capistrano::SCM::Git
-install_plugin Capistrano::Puma  # Default puma tasks
-install_plugin Capistrano::Puma::Nginx
+
 
 # Include tasks from other gems included in your Gemfile
 #
