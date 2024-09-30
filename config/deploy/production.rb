@@ -12,6 +12,7 @@ set :rails_env, 'production'
 set :deploy_env, "production"
 set :branch, 'master'
 set :deploy_to, '/data/skills'
+set :passenger_restart_with_touch, true
 
 server "44.211.39.223", user: "ubuntu", roles: %w{app db web}, my_property: :my_value
 
