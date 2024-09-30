@@ -14,7 +14,7 @@ set :branch, 'master'
 set :deploy_to, '/data/skills'
 set :passenger_restart_with_touch, true
 
-server "54.205.68.248", user: "ubuntu", roles: %w{app db web}, my_property: :my_value
+server "52.4.236.9", user: "ubuntu", roles: %w{app db web}, my_property: :my_value
 
 
 # role-based syntax
