@@ -13,6 +13,7 @@ set :deploy_env, "production"
 set :branch, 'master'
 set :deploy_to, '/data/skills'
 set :passenger_restart_with_touch, true
+set :linked_files, fetch(:linked_files, []).push('.env')
 
 server "52.4.236.9", user: "ubuntu", roles: %w{app db web}, my_property: :my_value
 
@@ -67,3 +68,11 @@ server "52.4.236.9", user: "ubuntu", roles: %w{app db web}, my_property: :my_val
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+
+set :default_env, {
+  'CLIENT_ID' => "pitc-skills-dev",
+  'SECRET' => "Hr3e9BSzyfRSkUksFkgLgFgIhK91aFPk",
+  'HOST_URL' => "http://keycloak:8080",
+  'KEYCLOAK_REDIRECT_HOST_URL' => "http://localhost:8080"
+}
