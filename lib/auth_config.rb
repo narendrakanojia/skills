@@ -47,13 +47,12 @@ class AuthConfig
       if local?
         settings_file[key] || default
       else
-        #raise("Environment variable not set: '#{key}'") if required && ENV[key.to_s.upcase].nil?
-        puts "Warning: Environment variable '#{key}' is not set. Using default value."
+        raise("Environment variable not set: '#{key}'") if required && ENV[key.to_s.upcase].nil?
+
         ENV.fetch(key.to_s.upcase, default)
-        return default || "1234"
       end
-       ENV.fetch(key.to_s.upcase, default)
     end
+
 
     def local?
       to_boolean(ENV.fetch('LOCAL', false)) || Rails.env.test?
