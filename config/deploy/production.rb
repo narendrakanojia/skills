@@ -75,4 +75,5 @@ set :default_env, {
   'SECRET' => "Hr3e9BSzyfRSkUksFkgLgFgIhK91aFPk",
   'HOST_URL' => "http://keycloak:8080",
   'KEYCLOAK_REDIRECT_HOST_URL' => "http://localhost:8080"
+  'REALM' => "pitc"
 }
