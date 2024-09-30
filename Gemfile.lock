@@ -563,6 +563,7 @@ DEPENDENCIES
   active_model_serializers
   activerecord-postgresql-adapter
   annotate
+  base64 (~> 0.2.0)
   bleib (= 0.0.8)
   bootsnap
   bootstrap (~> 5.0.0)
