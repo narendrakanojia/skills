@@ -19,7 +19,9 @@ Rails.application.routes.draw do
     get 'readiness', to: 'status#readiness'
   end
 
-  get root to: redirect(path: "/people")
+  get root to: redirect(path: "/en/people")
+  get "/people", to: redirect("/en/people")
+  get "/people_skills", to: redirect("/en/people_skills")
 
 
   scope "/:locale", locale: LOCALE_REGEX do
